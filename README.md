@@ -48,7 +48,16 @@ Run seeder for Players
 By default, the API must be running in localhost:80
 
 ## API Docs
-You can find the API docs for this proyect in the following [link](https://documenter.getpostman.com/view/1096358/2sB2j3DCmm).
+
+| **Endpoint**         | **Method** | **Description**            | **Request Body**                                                           | **Response (200)**                                                                    |
+| -------------------- | ---------- | -------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `/api/products`      | `GET`      | Get all products           | –                                                                          | `[{ "id": 1, "name": "Product 1", "price": 100.5, "stock": 10, "status": "active" }]` |
+| `/api/products/{id}` | `GET`      | Get a single product by ID | –                                                                          | `{ "id": 1, "name": "Product 1", "price": 100.5, "stock": 10, "status": "active" }`   |
+| `/api/products`      | `POST`     | Create a new product       | `{ "name": "Product 1", "price": 100.5, "stock": 10, "status": "active" }` | `{ "id": 1, "name": "Product 1", "price": 100.5, "stock": 10, "status": "active" }`   |
+| `/api/products/{id}` | `PUT`      | Update an existing product | `{ "name": "New name", "price": 120.0, "stock": 5, "status": "inactive" }` | `{ "id": 1, "name": "New name", "price": 120.0, "stock": 5, "status": "inactive" }`   |
+| `/api/products/{id}` | `DELETE`   | Delete a product by ID     | –                                                                          | `{ "message": "Product deleted successfully" }`                                       |
+
+
 
 ## Tests
 ```sh
