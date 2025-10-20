@@ -14,7 +14,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return Product::all();
+        try {
+            return Product::all();
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Internal server error'], 500);
+        }
     }
 
     /**
