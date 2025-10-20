@@ -42,7 +42,7 @@ Run migrations
 
 Run seeder for Players
 ```sh
-./vendor/bin/sail artisan db:seed --class=PlayerSeeder
+./vendor/bin/sail artisan db:seed --class=ProductSeeder
 ```
 
 By default, the API must be running in localhost:80
@@ -51,9 +51,3 @@ By default, the API must be running in localhost:80
 You can find the API docs for this proyect in the following [link](https://documenter.getpostman.com/view/1096358/2sB2j3DCmm).
 
 ## Tests
-
-## TODO
-- Finish tests and deploy
-- Add enum class for gender (M-F-O).
-- Add type in Tournaments (best3-best5).
-- Allow doubles matches.
